@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Quari Labs Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Light theme (fallback) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    /* Quari Labs Brand Colors */
+    --ql-primary: 11 100% 64%;        /* #ff6b44 */
+    --ql-primary-200: 11 100% 76%;    /* #ff9b82 */
+    --ql-primary-100: 27 100% 74%;    /* #ffbd7d */
+    --ql-black: 0 0% 0%;              /* #000000 */
+    --ql-white: 0 0% 100%;            /* #ffffff */
+
+    /* Gradients */
+    --ql-gradient: linear-gradient(90deg, hsl(var(--ql-primary)) 0%, hsl(var(--ql-primary-200)) 50%, hsl(var(--ql-primary-100)) 100%);
+    --ql-gradient-radial: radial-gradient(circle at center, hsl(var(--ql-primary) / 0.15) 0%, transparent 50%);
+
+    /* Shadows */
+    --ql-shadow-glow: 0 0 40px hsl(var(--ql-primary) / 0.3);
+    --ql-shadow-card: 0 4px 20px hsl(var(--ql-black) / 0.1);
+    --ql-shadow-elevated: 0 10px 40px hsl(var(--ql-black) / 0.15);
+
+    /* Network pattern */
+    --network-pattern: radial-gradient(circle at 50% 50%, hsl(var(--ql-primary) / 0.1) 1px, transparent 1px);
+  }
+
+  .dark {
+    /* Dark theme (default) */
+    --background: 240 10% 3.9%;       /* Very dark blue-gray */
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;               /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 11 100% 64%;           /* QL Primary */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 11 100% 64%;
+
+    /* Dark theme shadows */
+    --ql-shadow-card: 0 4px 20px hsl(var(--ql-black) / 0.4);
+    --ql-shadow-elevated: 0 10px 40px hsl(var(--ql-black) / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  /* Typography scales */
+  .text-hero {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tight;
+  }
+
+  .text-section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight;
+  }
+
+  .text-card-title {
+    @apply text-xl md:text-2xl font-semibold leading-tight;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Network background pattern */
+  .network-bg {
+    background: var(--ql-gradient-radial), var(--network-pattern);
+    background-size: 100px 100px, 30px 30px;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-hero {
+    @apply bg-ql-primary hover:bg-ql-primary/90 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[var(--ql-shadow-glow)];
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-ql-primary text-ql-primary hover:bg-ql-primary hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-ghost-hero {
+    @apply text-foreground hover:text-ql-primary font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:bg-ql-primary/10;
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border rounded-2xl shadow-[var(--ql-shadow-card)] hover:shadow-[var(--ql-shadow-elevated)] transition-all duration-300 hover:scale-[1.02];
+  }
+
+  .card-product {
+    @apply bg-card border border-border rounded-2xl shadow-[var(--ql-shadow-card)] hover:shadow-[var(--ql-shadow-elevated)] transition-all duration-300 hover:scale-[1.02] p-8 hover:border-ql-primary/50 cursor-pointer;
+  }
+
+  .card-focus {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card hover:border-ql-primary/30 transition-all duration-300 hover:scale-105;
+  }
+
+  /* Animations */
+  .fade-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-up.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .fade-right {
+    @apply opacity-0 translate-x-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-right.in-view {
+    @apply opacity-100 translate-x-0;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: var(--ql-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Navigation active state */
+  .nav-active {
+    @apply text-ql-primary font-medium;
+  }
+
+  /* Focus states for accessibility */
+  .focus-outline {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ql-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
+
+

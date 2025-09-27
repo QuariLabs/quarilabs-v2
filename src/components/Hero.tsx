@@ -38,7 +38,7 @@ export default function Hero() {
               <div className="relative w-full h-96 lg:h-[500px]">
                 {/* Central Hub */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-ql-gradient animate-glow-pulse flex items-center justify-center">
-                  <Brain className="h-12 w-12 text-white" />
+                  <Brain className="h-12 w-12 text-muted-foreground" />
                 </div>
                 
                 {/* Floating nodes */}

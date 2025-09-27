@@ -27,15 +27,15 @@ export default function Contact() {
       icon: Mail,
       title: "Email Us",
       description: "Get in touch via email for general inquiries",
-      contact: "hello@quarilabs.com",
-      action: "mailto:hello@quarilabs.com"
+      contact: "quarilabs@gmail.com",
+      action: "mailto:quarilabs@gmail.com"
     },
     {
       icon: MessageSquare,
       title: "Business Inquiries",
       description: "For partnerships and business development",
-      contact: "business@quarilabs.com",
-      action: "mailto:business@quarilabs.com"
+      contact: "contact@quarilabs.com",
+      action: "mailto:contact@quarilabs.com"
     },
     {
       icon: Building,
@@ -257,17 +257,17 @@ export default function Contact() {
             Follow us on social media for the latest updates on our products and industry insights.
           </p>
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-muted-foreground hover:text-ql-primary transition-colors">
-              Twitter
+            <a href="https://x.com/QuariLabs" className="text-muted-foreground hover:text-ql-primary transition-colors">
+              X (formerly Twitter)
             </a>
-            <a href="#" className="text-muted-foreground hover:text-ql-primary transition-colors">
+            <a href="https://www.linkedin.com/company/quarilabs/" className="text-muted-foreground hover:text-ql-primary transition-colors">
               LinkedIn
             </a>
-            <a href="#" className="text-muted-foreground hover:text-ql-primary transition-colors">
+            <a href="https://github.com/QuariLabs/" className="text-muted-foreground hover:text-ql-primary transition-colors">
               GitHub
             </a>
-            <a href="#" className="text-muted-foreground hover:text-ql-primary transition-colors">
-              Discord
+            <a href="https://t.me/quari_admin" className="text-muted-foreground hover:text-ql-primary transition-colors">
+              Telegram
             </a>
           </div>
         </div>

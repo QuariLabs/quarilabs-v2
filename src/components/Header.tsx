@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -52,7 +53,7 @@ const Header = () => {
             className="flex items-center space-x-2 text-2xl font-bold text-gradient focus-outline"
           >
             <div className="w-8 h-8 bg-ql-gradient rounded-lg"></div>
-            <span>Quari Labs</span>
+            <Image className="-my-16" src="/assets/Quari logo.svg" alt="Quari Labs" width={196} height={32} />
           </Link>
 
           {/* Desktop Navigation */}

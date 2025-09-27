@@ -93,9 +93,11 @@ const VelixProtocol = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-hero">
-                Launch App
-                <ExternalLink className="ml-2 h-4 w-4" />
+              <Button asChild className="btn-hero">
+                <Link href="https://velix-frontend-gl4ct0q98-velix-038f8faf.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  Launch App
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button variant="outline" className="btn-outline-hero">
                 View Documentation
@@ -304,9 +306,11 @@ const VelixProtocol = () => {
             Join thousands of users earning rewards while maintaining liquidity with Velix Protocol.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="btn-hero">
-              Launch Velix Protocol
-              <ExternalLink className="ml-2 h-4 w-4" />
+            <Button asChild className="btn-hero">
+              <Link href="https://velix-frontend-gl4ct0q98-velix-038f8faf.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Launch Velix Protocol
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <Link href="/contact">
               <Button variant="outline" className="btn-outline-hero">

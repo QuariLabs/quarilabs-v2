@@ -106,9 +106,11 @@ const AlphaAlith = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-hero">
-                Request Beta Access
-                <ExternalLink className="ml-2 h-4 w-4" />
+              <Button asChild className="btn-hero">
+                <Link href="https://t.me/AlphaAlithSignalBot" target="_blank" rel="noopener noreferrer">
+                  Request Beta Access
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button variant="outline" className="btn-outline-hero">
                 View API Docs
@@ -375,9 +377,11 @@ const AlphaAlith = () => {
             Join the beta program and start making data-driven decisions with Alpha Alith's advanced AI insights.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="btn-hero">
-              Request Beta Access
-              <ExternalLink className="ml-2 h-4 w-4" />
+            <Button asChild className="btn-hero">
+              <Link href="https://t.me/AlphaAlithSignalBot" target="_blank" rel="noopener noreferrer">
+                Request Beta Access
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <Link href="/contact">
               <Button variant="outline" className="btn-outline-hero">

@@ -109,9 +109,11 @@ const Froska = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-hero">
-                Join Community
-                <ExternalLink className="ml-2 h-4 w-4" />
+              <Button asChild className="btn-hero">
+                <Link href="https://t.me/metisfroska" target="_blank" rel="noopener noreferrer">
+                  Join Community
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button variant="outline" className="btn-outline-hero">
                 Read Whitepaper
@@ -384,9 +386,11 @@ const Froska = () => {
             Your creativity and participation shape the future.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="btn-hero">
-              Join Froska Community
-              <ExternalLink className="ml-2 h-4 w-4" />
+            <Button asChild className="btn-hero">
+              <Link href="https://t.me/metisfroska" target="_blank" rel="noopener noreferrer">
+                Join Froska Community
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <Link href="/contact">
               <Button variant="outline" className="btn-outline-hero">

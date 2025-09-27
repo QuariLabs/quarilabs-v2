@@ -29,10 +29,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "GitHub", icon: Github, href: "#" },
-    { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "LinkedIn", icon: Linkedin, href: "#" },
-    { name: "Email", icon: Mail, href: "mailto:hello@quarilabs.com" },
+    { name: "GitHub", icon: Github, href: "https://github.com/QuariLabs/" },
+    { name: "Twitter", icon: Twitter, href: "https://x.com/QuariLabs" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/quarilabs/" },
+    { name: "Email", icon: Mail, href: "mailto:contact@quarilabs.com" },
   ];
 
   return (

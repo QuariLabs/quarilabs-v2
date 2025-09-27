@@ -50,8 +50,8 @@ export default function Products() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-4 rounded-2xl bg-ql-primary/10 group-hover:bg-ql-primary group-hover:text-white transition-all duration-300">
-                    <Image className="h-10 w-10 text-ql-primary group-hover:text-white transition-colors duration-300"
+                  <div className="p-4 rounded-2xl bg-ql-primary/10 group-hover:border-ql-primary/50 transition-all duration-300">
+                    <Image className="h-full w-full text-ql-primary group-hover:text-white transition-colors duration-300"
                     src={product.image} 
                     alt={product.name} 
                     width={48} 
